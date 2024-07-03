@@ -1,21 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Maven Pro", sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
     background-color: #f4f4f4;
 }
+
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    max-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
+
 .profile-img {
     width: 150px;
     height: 150px;
@@ -23,34 +32,78 @@ body {
     object-fit: cover;
     margin-bottom: 20px;
 }
+
 h1 {
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #333;
 }
+
 p {
     color: #666;
     line-height: 1.6;
 }
-.contact-info {
-    margin-top: 20px;
-}
-.contact-info p {
-    margin: 5px 0;
-}
-.italic {
-    font-style: italic;
-}
+
 .download-btn {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     transition: background-color 0.3s;
 }
+
 .download-btn:hover {
     background-color: #0056b3;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 5px 0;
+    color: white;
+}
+
+.italic {
+    font-style: italic;
+}
+
+@media (max-width: 767px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        margin-top: 10px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    footer p {
+        margin: 3px 0;
+    }
 }
